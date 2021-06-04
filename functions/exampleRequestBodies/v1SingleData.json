@@ -1,0 +1,15 @@
+{
+    "end_device_ids": {
+        "dev_eui": "nicolas"
+    },
+    "uplink_message": {
+        "decoded_payload": {
+            "light": 24,
+            "co2": 412.2,
+            "humidity": 26.12,
+            "pressure": 101771.27,
+            "temperature": 19.99,
+            "version": 1
+        }
+    }
+}

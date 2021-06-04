@@ -1,0 +1,7 @@
+// BME280 constants
+#define BME280_SDA_PIN {sda}
+#define BME280_SCL_PIN {scl}
+#define TEMPERATURE_EMERGENCY_THRESHOLD {temperature}
+#define PRESSURE_EMERGENCY_THRESHOLD {pressure}
+#define HUMIDITY_EMERGENCY_THRESHOLD {humidity}
+

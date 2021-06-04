@@ -1,0 +1,57 @@
+#include <EspDevice.h>
+
+#define SEND_PERIOD_MIN {SEND_PERIOD_MIN}
+
+// GPIO pins for sensors
+#define BME_SDA_PIN {BME_SDA_PIN}
+#define BME_SCL_PIN {BME_SCL_PIN}
+#define MQ135_PIN   {MQ135_PIN}
+#define GPS_RX      {GPS_RX}
+#define GPS_TX      {GPS_TX}
+#define SOUND_PIN   {SOUND_PIN}
+
+// Serial baud rates
+#define GPS_SERIAL_BAUD {GPS_SERIAL_BAUD}
+
+// Emergency threshold constants
+#define TEMPERATURE_EMERGENCY_THRESHOLD {TEMPERATURE_EMERGENCY_THRESHOLD}
+#define PRESSURE_EMERGENCY_THRESHOLD {PRESSURE_EMERGENCY_THRESHOLD}
+#define HUMIDITY_EMERGENCY_THRESHOLD {HUMIDITY_EMERGENCY_THRESHOLD}
+#define CO2_EMERGENCY_THRESHOLD {CO2_EMERGENCY_THRESHOLD}
+#define NOISE_EMERGENCY_THRESHOLD {NOISE_EMERGENCY_THRESHOLD}
+
+/* Heltec license to use LoRaWan with the device */
+uint32_t license[4] = {LICENSE};
+
+/* OTAA parameters */
+uint8_t DevEui[] = {DEV_EUI};
+uint8_t AppEui[] = {0x70, 0xB3, 0xD5, 0x7E, 0xD0, 0x03, 0x76, 0x4E};
+uint8_t AppKey[] = {APP_KEY};
+
+EspDevice esp(license, DevEui, AppEui, AppKey, SEND_PERIOD_MIN);
+// WiFi parameters
+const char *ssid = "{WIFI_SSID}";
+const char *password = "{WIFI_PASSWORD}";
+const char *googleKey = "{GOOGLE_API_KEY}";
+const char *urlInflux = "https://lln-smart-city.azurewebsites.net/api/InfluxDBIntegration";
+const char *token = "{AUTH_TOKEN}";
+
+void setup()
+{
+    // Run setup method of the ESP32 device
+    esp.initWifi(ssid, password, googleKey, urlInflux, token);
+    esp.setup();
+    esp.addBme(BME_SDA_PIN, BME_SCL_PIN,
+               TEMPERATURE_EMERGENCY_THRESHOLD,
+               PRESSURE_EMERGENCY_THRESHOLD,
+               HUMIDITY_EMERGENCY_THRESHOLD);
+    esp.addGasSensor(MQ135_PIN, CO2_EMERGENCY_THRESHOLD);
+    esp.addGPS(GPS_SERIAL_BAUD, GPS_RX, GPS_TX);
+    esp.addSoundSensor(SOUND_PIN, NOISE_EMERGENCY_THRESHOLD);
+}
+
+void loop()
+{
+    // Run loop method of the ESP32 device
+    esp.loop();
+}

@@ -1,0 +1,6 @@
+void setup()
+{
+    // Run setup method of the ESP32 device
+    esp.initPacket(WAKEUP_PERIOD_MIN, N_MEASUREMENTS, VERSION);
+    esp.initWifi(ssid, password, googleKey, urlInflux, token);
+    esp.setup();

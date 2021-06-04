@@ -1,0 +1,8 @@
+// BME680 constants
+#define BME680_SDA_PIN {sda}
+#define BME680_SCL_PIN {scl}
+#define TEMPERATURE_EMERGENCY_THRESHOLD {temperature}
+#define PRESSURE_EMERGENCY_THRESHOLD {pressure}
+#define HUMIDITY_EMERGENCY_THRESHOLD {humidity}
+#define AIR_QUALITY_EMERGENCY_THRESHOLD {airQuality}
+

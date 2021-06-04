@@ -1,0 +1,10 @@
+/**
+ * Louvain-la-Neuve: a smart city
+ * DE KEERSMAEKER Francois
+ * VAN DE WALLE Nicolas
+ *
+ * Auto-generated Arduino code for the device {deviceName}
+ */
+ 
+#include <EspDevice.h>
+

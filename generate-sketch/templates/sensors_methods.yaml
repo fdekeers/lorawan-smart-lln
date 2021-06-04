@@ -1,0 +1,5 @@
+bme280: "    esp.addBme280(BME280_SDA_PIN, BME280_SCL_PIN,\n                  TEMPERATURE_EMERGENCY_THRESHOLD,\n                  PRESSURE_EMERGENCY_THRESHOLD,\n                  HUMIDITY_EMERGENCY_THRESHOLD);\n"
+mq135: "    esp.addGasSensor(MQ135_PIN, CO2_EMERGENCY_THRESHOLD);\n"
+gps: "    esp.addGPS(GPS_SERIAL_BAUD, GPS_RX, GPS_TX);\n"
+sound: "    esp.addSoundSensor(SOUND_PIN, NOISE_EMERGENCY_THRESHOLD);\n"
+bme680: "    esp.addBme680(BME680_SDA_PIN, BME680_SCL_PIN,\n                  TEMPERATURE_EMERGENCY_THRESHOLD,\n                  PRESSURE_EMERGENCY_THRESHOLD,\n                  HUMIDITY_EMERGENCY_THRESHOLD,\n                  AIR_QUALITY_EMERGENCY_THRESHOLD);\n"

@@ -1,0 +1,41 @@
+deviceName: esp32-test
+configuration:
+  wakeupPeriod: 10
+  wifi:
+    ssid: SSID
+    password: PASSWORD
+    googleKey: GOOGLE_API_KEY
+    webhook:
+      url: https://lln-smart-city.azurewebsites.net/api/InfluxDBIntegration
+      token: AUTHORIZATION_TOKEN
+  ttn:
+    license: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+    devEui: 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    appEui: 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    appKey: >-
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+sensors:
+  - type: bme280
+    pins:
+      sda: 4
+      scl: 15
+    thresholds:
+      temperature: 30
+      pressure: 102000
+      humidity: 80
+  - type: mq135
+    pins:
+      analog: 36
+    thresholds:
+      co2: 700
+  - type: sound
+    pins:
+      analog: 39
+    thresholds:
+      noise: 4090
+  - type: gps
+    serialBaudRate: 9600
+    pins:
+      rx: 16
+      tx: 17

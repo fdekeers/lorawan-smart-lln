@@ -1,0 +1,5 @@
+// GPS constants
+#define GPS_SERIAL_BAUD {serialBaudRate}
+#define GPS_RX  {rx}
+#define GPS_TX  {tx}
+

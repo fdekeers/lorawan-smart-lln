@@ -1,0 +1,4 @@
+// MQ135 constants
+#define MQ135_PIN   {analog}
+#define CO2_EMERGENCY_THRESHOLD {co2}
+

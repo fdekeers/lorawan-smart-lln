@@ -1,0 +1,22 @@
+// Wake-up period and number of measurements before sending
+#define WAKEUP_PERIOD_MIN {wakeupPeriod}
+#define N_MEASUREMENTS    {nMeasurements}
+#define VERSION           {version}
+
+/* Heltec license to use LoRaWan with the device */
+uint32_t license[4] = {license};
+
+/* OTAA parameters */
+uint8_t DevEui[] = {devEui};
+uint8_t AppEui[] = {appEui};
+uint8_t AppKey[] = {appKey};
+
+EspDevice esp(license, DevEui, AppEui, AppKey);
+
+// WiFi parameters
+const char *ssid = "{ssid}";
+const char *password = "{password}";
+const char *googleKey = "{googleKey}";
+const char *urlInflux = "{url}";
+const char *token = "{token}";
+

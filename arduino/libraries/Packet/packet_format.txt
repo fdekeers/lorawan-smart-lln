@@ -1,0 +1,8 @@
+Bytes - Data
+1     - Version (2)
+1     - Interval (minutes)
+for each timestamp:
+4     - Timestamp
+  for each data:
+  1   - Type header
+  X   - Data

@@ -1,0 +1,4 @@
+// Sound sensor constants
+#define SOUND_PIN   {analog}
+#define NOISE_EMERGENCY_THRESHOLD {noise}
+

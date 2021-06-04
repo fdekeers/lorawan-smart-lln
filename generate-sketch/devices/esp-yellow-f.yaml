@@ -1,0 +1,29 @@
+deviceName: esp-yellow-f
+configuration:
+  wakeupPeriod: 1
+  nMeasurements: 1
+  version: 1
+  wifi:
+    ssid: SSID
+    password: PASSWORD
+    googleKey: GOOGLE_API_KEY
+    webhook:
+      url: https://lln-smart-city.azurewebsites.net/api/InfluxDBIntegration
+      token: AUTHORIZATION_TOKEN
+  ttn:
+    license: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+    devEui: 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    appEui: 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    appKey: >-
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+sensors:
+  - type: bme680
+    pins:
+      sda: 4
+      scl: 15
+    thresholds:
+      temperature: 30
+      pressure: 102000
+      humidity: 80
+      airQuality: 60

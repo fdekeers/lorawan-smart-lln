@@ -1,0 +1,5 @@
+void loop()
+{
+    // Run loop method of the ESP32 device
+    esp.loop();
+}

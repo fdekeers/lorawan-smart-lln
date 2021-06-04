@@ -1,0 +1,33 @@
+deviceName: esp-blue-a
+configuration:
+  wakeupPeriod: 10
+  nMeasurements: 4
+  version: 3
+  wifi:
+    ssid: SSID
+    password: PASSWORD
+    googleKey: GOOGLE_API_KEY
+    webhook:
+      url: https://lln-smart-city.azurewebsites.net/api/InfluxDBIntegration
+      token: AUTHORIZATION_TOKEN
+  ttn:
+    license: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+    devEui: 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    appEui: 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    appKey: >-
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+sensors:
+  - type: bme280
+    pins:
+      sda: 4
+      scl: 15
+    thresholds:
+      temperature: 30
+      pressure: 102000
+      humidity: 80
+  - type: mq135
+    pins:
+      analog: 2
+    thresholds:
+      co2: 700

@@ -1,0 +1,45 @@
+{
+    "end_device_ids": {
+        "dev_eui": "nicolas"
+    },
+    "uplink_message": {
+        "decoded_payload": {
+            "version": 2,
+            "interval": 5,
+            "measurements": [
+                {
+                    "timestamp": 0,
+                    "light": 24,
+                    "co2": 412.2,
+                    "humidity": 26.12,
+                    "pressure": 101771.27,
+                    "temperature": 19.99
+                },
+                {
+                    "timestamp": 1,
+                    "light": 25,
+                    "co2": 412.2,
+                    "humidity": 26.12,
+                    "pressure": 101771.27,
+                    "temperature": 19.99
+                },
+                {
+                    "timestamp": 2,
+                    "light": 23,
+                    "co2": 412.2,
+                    "humidity": 26.12,
+                    "pressure": 101771.27,
+                    "temperature": 19.99
+                },
+                {
+                    "timestamp": 3,
+                    "light": 24,
+                    "co2": 412.2,
+                    "humidity": 26.12,
+                    "pressure": 101771.27,
+                    "temperature": 19.99
+                }
+            ]
+        }
+    }
+}
