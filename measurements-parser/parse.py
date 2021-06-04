@@ -217,8 +217,7 @@ class Parser:
 
 
 if __name__ == '__main__':
-    plt.rcParams.update({'font.size': 20})
-    LAST_ACTIVATION_ONLY = True
+    LAST_ACTIVATION_ONLY = False
 
     if not LAST_ACTIVATION_ONLY:
         fig, ax = plt.subplots(2)

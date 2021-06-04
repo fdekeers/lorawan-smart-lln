@@ -1,6 +1,6 @@
 # Using LoRaWAN and Wi-Fi for smart city monitoring in Louvain-la-Neuve
 UCLouvain master's thesis\
-François DE KEERSMAEKER & Nicolas VAN DE WALLE
+François DE KEERSMAEKER & Nicolas VAN DE WALLE\
 Supervised by Pr. Yves Deville & Pr. Ramin Sadre
 
 This repository contains the software for our master's thesis:
