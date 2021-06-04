@@ -1,6 +1,6 @@
 # Automatic generation of end devices sketches
 
-This directory contains the necessary files for the automatic generation of Arduino sketches for WiFi LoRa 32 end devices. The configuration of an end device can be described in the form of a YAML file, that will be used to create a valid Arduino sketch for this device, thanks to this script.
+This directory contains the necessary files for the automatic generation of Arduino sketches for WiFi LoRa 32 end devices. The configuration of an end device can be described in the form of a YAML file, that will be used to create a valid Arduino sketch for this device, thanks to this script. The Arduino sketches created by the script are placed in the [arduino/devices](../arduino/devices) folder.
 
 The Python script is available in the file [generate-sketch.py](./generate-sketch.py). It takes one command line argument: the name of the YAML configuration file for the device. To use the script, run the following command in this folder:
 ```shell
