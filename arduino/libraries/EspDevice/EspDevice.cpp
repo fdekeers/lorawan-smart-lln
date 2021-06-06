@@ -605,7 +605,6 @@ void EspDevice::loop()
 	case DEVICE_STATE_SEND:
 	{
 		if (_startup) {
-			//sendLora();
 			_startup = false;
 		}
 		else
@@ -616,7 +615,6 @@ void EspDevice::loop()
 	#endif
 			if (_emergency) {
 				sendWifi();
-				sendLora();
 				_count = 0;
 			}
 			else if (_count >= _nMeasurements - 1)
