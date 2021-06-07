@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Token management web app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This web app allows authenticated users to create and revoke tokens for different devices.
 
 ## Available Scripts
 
