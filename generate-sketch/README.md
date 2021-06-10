@@ -13,6 +13,6 @@ pip install pyyaml
 
 The [templates](./templates) directory contains various templates that are used and filled by the script, based on the configuration file, to produce the Arduino sketch.
 To accommodate new sensors, their templates must be provided into this folder, following the structure of the already present sensors. In this file, the placeholders must have the same name as their counterparts in the YAML configuration file.
-The method to add the connection between the sensor and the device must then be added into the [sensors_methods.txt](sensors_methods.txt) file.
+The method to add the connection between the sensor and the device must then be added into the [sensors_methods.yaml](sensors_methods.yaml) file.
 
 The [devices](./devices) directory contains sample YAML configuration files, that can be used as example for new devices.

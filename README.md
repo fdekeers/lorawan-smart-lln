@@ -1,15 +1,15 @@
 # Using LoRaWAN and Wi-Fi for smart city monitoring in Louvain-la-Neuve
-UCLouvain master's thesis\
+UCLouvain master's thesis, 2021\
 François DE KEERSMAEKER & Nicolas VAN DE WALLE\
 Supervised by Pr. Yves Deville & Pr. Ramin Sadre
 
-This repository contains the software for our master's thesis:
+This repository contains the software for our master's thesis at UCLouvain in 2021:
 **Using LoRaWAN and Wi-Fi for smart city monitoring in Louvain-la-Neuve**.
 
 This repository contains the following folders:
 - [arduino](./arduino/): Arduino sketches for our Heltec WiFi Lora 32 end devices,
 as well as the needed Arduino libraries
-- [functions](./functions/): code for our backend cloud platform, i.e. cloud function and InfluxDB database
+- [functions](./functions/): code for the backend cloud functions
 - [generate-sketch](./generate-sketch/): python script for the automatic generation of devices Arduino sketches
 - [measurements-parser](./measurements-parser/): data from the energy consumption measurements at Welcome,
 with python script to parse and generate graphs
